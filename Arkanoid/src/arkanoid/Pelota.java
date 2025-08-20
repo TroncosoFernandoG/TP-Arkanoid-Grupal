@@ -76,15 +76,15 @@ public class Pelota {
             }
         }
         
-        // Colisión con la paleta
+    
         if (y + SIZE >= paleta.getY() && 
             x + SIZE >= paleta.getX() && 
             x <= paleta.getX() + paleta.getWidth()) {
             
-            // Cambiamos dirección vertical
+         
             yVel = -Math.abs(yVel);
             
-            // Influencia del movimiento de la paleta
+          
             int paletaVel = paleta.getVel();
             if (paletaVel != 0) {
                 int centroPaleta = paleta.getX() + paleta.getWidth() / 2;
@@ -109,4 +109,5 @@ public class Pelota {
 
     public int getX() { return x; }
     public int getY() { return y; }
+
 }
